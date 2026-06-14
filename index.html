@@ -13,6 +13,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -30,69 +31,99 @@ padding:12px 0;
 .marquee{
 display:inline-block;
 font-weight:bold;
-color:white;
-animation:scroll 20s linear infinite;
+animation:scroll 18s linear infinite;
 }
 
 @keyframes scroll{
-from{
-transform:translateX(100%);
-}
-to{
-transform:translateX(-100%);
-}
+from{transform:translateX(100%);}
+to{transform:translateX(-100%);}
 }
 
-.navbar{
+header{
 background:black;
 padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
-font-size:32px;
+text-align:center;
+font-size:36px;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.menu{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
 font-weight:bold;
 }
 
-.icons{
-font-size:24px;
-}
-
-.hero{
+.banner{
 height:600px;
-background:linear-gradient(135deg,#ff0066,#ff9900,#00ccff);
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding:20px;
 }
 
-.hero h1{
-font-size:70px;
+.banner h1{
+font-size:60px;
 margin-bottom:15px;
 }
 
-.hero p{
-font-size:24px;
+.banner p{
+font-size:22px;
 margin-bottom:20px;
 }
 
-.hero button{
+.btn{
+background:white;
+color:black;
 padding:15px 35px;
-border:none;
 border-radius:30px;
-font-size:18px;
+text-decoration:none;
 font-weight:bold;
-cursor:pointer;
+}
+
+.jersey-banner{
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=1600');
+background-size:cover;
+background-position:center;
+}
+
+.boots-banner{
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1600');
+background-size:cover;
+background-position:center;
+}
+
+.elite-banner{
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('https://images.unsplash.com/photo-1511886929837-354d827aae26?w=1600');
+background-size:cover;
+background-position:center;
 }
 
 .section-title{
 text-align:center;
-font-size:40px;
-padding:40px 0;
+font-size:42px;
+padding:60px 20px 30px;
 }
 
 .products{
@@ -105,7 +136,7 @@ padding:20px;
 
 .card{
 background:#222;
-width:250px;
+width:260px;
 border-radius:15px;
 overflow:hidden;
 }
@@ -126,15 +157,15 @@ color:#999;
 }
 
 .sale-price{
-color:#00ff66;
 font-size:24px;
+color:#00ff66;
 font-weight:bold;
 }
 
-.footer{
+footer{
 background:black;
 text-align:center;
-padding:30px;
+padding:40px;
 margin-top:50px;
 }
 
@@ -145,66 +176,155 @@ margin-top:50px;
 
 <div class="topbar">
 <div class="marquee">
-🔥 TOP11 MAURITIUS • ⚽ JERSEYS • 👟 BOOTS • 🎒 ACCESSORIES • 📱 PHONE COVERS • 🚚 FAST DELIVERY ACROSS MAURITIUS • 🔥 TOP11 MAURITIUS • ⚽ JERSEYS • 👟 BOOTS • 🎒 ACCESSORIES • 📱 PHONE COVERS • 🚚 FAST DELIVERY ACROSS MAURITIUS
+🔥 TOP11 MAURITIUS • ⚽ JERSEYS • 👟 BOOTS • 🎒 ACCESSORIES • ⚽ BALLS • 📱 PHONE COVERS • 🚚 FAST DELIVERY ACROSS MAURITIUS •
 </div>
 </div>
 
-<div class="navbar">
-<div class="logo">TOP11 MAURITIUS</div>
-<div class="icons">🔍 🛒 👤</div>
+<header>
+
+<div class="logo">
+TOP11 MAURITIUS
 </div>
 
-<div class="hero">
-<h1>NEW ARRIVALS</h1>
-<p>Football Jerseys • Boots • Accessories • Phone Covers</p>
-<button>SHOP NOW</button>
+<div class="menu">
+<a href="#jerseys">Jerseys</a>
+<a href="#boots">Football Boots</a>
+<a href="#accessories">Football Accessories</a>
+<a href="#balls">Balls</a>
+<a href="#covers">Phone Covers</a>
 </div>
 
-<h2 class="section-title">Featured Products</h2>
+</header>
+
+<section class="banner jersey-banner">
+
+<h1>WORLD CUP COLLECTION</h1>
+
+<p>Discover National Team Jerseys</p>
+
+<a href="#jerseys" class="btn">
+SHOP YOUR JERSEY
+</a>
+
+</section>
+
+<section class="banner boots-banner">
+
+<h1>FOOTBALL BOOTS</h1>
+
+<p>Speed, Control & Performance</p>
+
+<a href="#boots" class="btn">
+SHOP YOUR BOOTS
+</a>
+
+</section>
+
+<section class="banner elite-banner">
+
+<h1>ELITE F50 COLLECTION</h1>
+
+<p>Premium Elite Football Boots</p>
+
+<a href="#elite" class="btn">
+SHOP OUR ELITES
+</a>
+
+</section>
+
+<section id="jerseys">
+
+<h2 class="section-title">
+⚽ Jerseys Collection
+</h2>
 
 <div class="products">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?w=600">
+<img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600">
 <div class="card-content">
-<h3>Football Jersey</h3>
+<h3>Argentina World Cup Jersey</h3>
 <p class="old-price">Rs 1800</p>
 <p class="sale-price">Rs 1400</p>
 </div>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?w=600">
+<div class="card-content">
+<h3>Portugal Jersey</h3>
+<p class="old-price">Rs 1800</p>
+<p class="sale-price">Rs 1400</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="boots">
+
+<h2 class="section-title">
+👟 Football Boots
+</h2>
+
+<div class="products">
+
+<div class="card">
 <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600">
 <div class="card-content">
-<h3>Football Boots</h3>
-<p class="old-price">Rs 4500</p>
+<h3>Mercurial</h3>
 <p class="sale-price">Rs 3900</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600">
 <div class="card-content">
-<h3>Phone Cover</h3>
-<p class="old-price">Rs 800</p>
-<p class="sale-price">Rs 600</p>
+<h3>Predator</h3>
+<p class="sale-price">Rs 4200</p>
 </div>
 </div>
+
+</div>
+
+</section>
+
+<section id="elite">
+
+<h2 class="section-title">
+🔥 Elite F50 Collection
+</h2>
+
+<div class="products">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600">
 <div class="card-content">
-<h3>Accessories</h3>
-<p class="old-price">Rs 1200</p>
-<p class="sale-price">Rs 900</p>
+<h3>Adidas F50 Elite</h3>
+<p class="sale-price">Rs 6500</p>
 </div>
 </div>
 
 </div>
 
-<div class="footer">
+</section>
+
+<section id="accessories">
+<h2 class="section-title">🎒 Football Accessories</h2>
+</section>
+
+<section id="balls">
+<h2 class="section-title">⚽ Balls</h2>
+</section>
+
+<section id="covers">
+<h2 class="section-title">📱 Phone Covers</h2>
+</section>
+
+<footer>
 © Top11 Mauritius
-</div>
+</footer>
 
 </body>
 </html>
