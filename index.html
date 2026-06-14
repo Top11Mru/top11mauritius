@@ -1,58 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Top11 Mauritius</title>
+
 <style>
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
+}
+
+body{
 background:#111;
 color:white;
 }
 
 .topbar{
-background:#00cc44;
-padding:10px;
+background:#00c853;
+padding:12px;
 text-align:center;
 font-weight:bold;
 }
 
+.navbar{
+background:black;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+}
+
+.icons{
+font-size:24px;
+}
+
 .hero{
-height:500px;
-background:url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=1600') center/cover;
+height:600px;
+background:linear-gradient(135deg,#ff0066,#ff9900,#00ccff);
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+text-align:center;
 }
 
 .hero h1{
-font-size:60px;
-margin:0;
+font-size:70px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:24px;
+margin-bottom:20px;
 }
 
 .hero button{
-padding:15px 30px;
+padding:15px 35px;
 border:none;
 border-radius:30px;
 font-size:18px;
 cursor:pointer;
+font-weight:bold;
 }
 
-.categories{
+.section-title{
+text-align:center;
+font-size:40px;
+padding:40px 0;
+}
+
+.products{
 display:flex;
-justify-content:center;
-gap:20px;
-padding:40px;
 flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+padding:20px;
 }
 
 .card{
 background:#222;
-padding:20px;
-border-radius:12px;
-width:200px;
+width:250px;
+border-radius:15px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+}
+
+.old-price{
+text-decoration:line-through;
+color:#999;
+}
+
+.sale-price{
+color:#00ff66;
+font-size:24px;
+font-weight:bold;
+}
+
+.footer{
+background:black;
 text-align:center;
+padding:30px;
+margin-top:50px;
 }
 </style>
 </head>
@@ -60,33 +124,64 @@ text-align:center;
 <body>
 
 <div class="topbar">
-FREE SHIPPING OVER RS 3000 | TOP11 MAURITIUS
+FREE SHIPPING OVER Rs 3000 | TOP11 MAURITIUS
+</div>
+
+<div class="navbar">
+<div class="logo">Top11 Mauritius</div>
+<div class="icons">🔍 🛒 👤</div>
 </div>
 
 <div class="hero">
-<h1>TOP11 MAURITIUS</h1>
-<p>Football Jerseys • Boots • Accessories</p>
+<h1>NEW ARRIVALS</h1>
+<p>Football Jerseys • Boots • Accessories • Phone Covers</p>
 <button>SHOP NOW</button>
 </div>
 
-<div class="categories">
+<h2 class="section-title">Featured Products</h2>
+
+<div class="products">
 
 <div class="card">
-⚽ Jerseys
+<img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?w=600">
+<div class="card-content">
+<h3>Football Jersey</h3>
+<p class="old-price">Rs 1800</p>
+<p class="sale-price">Rs 1400</p>
+</div>
 </div>
 
 <div class="card">
-👟 Boots
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600">
+<div class="card-content">
+<h3>Football Boots</h3>
+<p class="old-price">Rs 4500</p>
+<p class="sale-price">Rs 3900</p>
+</div>
 </div>
 
 <div class="card">
-🎒 Accessories
+<img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600">
+<div class="card-content">
+<h3>Phone Cover</h3>
+<p class="old-price">Rs 800</p>
+<p class="sale-price">Rs 600</p>
+</div>
 </div>
 
 <div class="card">
-📱 Phone Covers
+<img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600">
+<div class="card-content">
+<h3>Accessories</h3>
+<p class="old-price">Rs 1200</p>
+<p class="sale-price">Rs 900</p>
+</div>
 </div>
 
+</div>
+
+<div class="footer">
+© Top11 Mauritius
 </div>
 
 </body>
