@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,27 +16,28 @@ scroll-behavior:smooth;
 }
 
 body{
-background:white;
+background:#000;
+color:white;
 }
 
-/* MOVING BAR */
+/* RED MOVING BAR */
 
-.topbar{
-background:#16a34a;
-color:white;
-font-weight:bold;
+.shipping-bar{
+background:#d60000;
+padding:12px 0;
 overflow:hidden;
 white-space:nowrap;
-padding:12px 0;
+font-weight:bold;
+font-size:18px;
 }
 
-.topbar span{
+.shipping-text{
 display:inline-block;
 padding-left:100%;
-animation:move 20s linear infinite;
+animation:scrollText 20s linear infinite;
 }
 
-@keyframes move{
+@keyframes scrollText{
 0%{transform:translateX(0);}
 100%{transform:translateX(-100%);}
 }
@@ -45,166 +45,134 @@ animation:move 20s linear infinite;
 /* HEADER */
 
 header{
-background:black;
-padding:20px 40px;
+background:#000;
+padding:20px 50px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 position:sticky;
 top:0;
-z-index:1000;
+z-index:999;
 }
 
 .logo{
-color:white;
-font-size:40px;
+font-size:42px;
 font-weight:900;
-}
-
-nav{
-display:flex;
-gap:30px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
+margin-left:25px;
 font-weight:bold;
 font-size:18px;
 }
 
-/* HERO BANNERS */
+nav a:hover{
+color:#ff0000;
+}
 
-.hero{
-height:700px;
-background-size:cover;
-background-position:center;
+/* BANNERS */
+
+.banner{
+height:750px;
 display:flex;
 align-items:center;
 padding-left:8%;
+background-size:cover;
+background-position:center;
 position:relative;
 }
 
-.overlay{
+.banner::before{
+content:'';
 position:absolute;
 top:0;
 left:0;
-right:0;
-bottom:0;
-background:rgba(0,0,0,0.35);
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
 }
 
 .content{
 position:relative;
 z-index:2;
-color:white;
-max-width:600px;
+max-width:650px;
 }
 
 .content h1{
-font-size:70px;
+font-size:80px;
 margin-bottom:20px;
-font-weight:900;
 }
 
 .content p{
-font-size:22px;
-margin-bottom:30px;
+font-size:25px;
+margin-bottom:35px;
 }
 
 .btn{
 display:inline-block;
-padding:18px 40px;
 background:white;
 color:black;
-text-decoration:none;
-font-weight:bold;
+padding:18px 40px;
 border-radius:50px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+}
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 /* COLLECTIONS */
 
-.section-title{
-text-align:center;
-font-size:42px;
-margin:70px 0 40px;
+.collection{
+padding:80px 30px;
+background:#111;
 }
 
-.collections{
+.collection h2{
+font-size:45px;
+text-align:center;
+margin-bottom:40px;
+}
+
+.products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
-padding:0 5% 80px;
 }
 
 .card{
-background:#f3f4f6;
-padding:60px 20px;
+background:#222;
+padding:25px;
 border-radius:15px;
-font-size:24px;
-font-weight:bold;
 text-align:center;
-transition:0.3s;
+font-size:22px;
+font-weight:bold;
 }
-
-.card:hover{
-transform:translateY(-6px);
-}
-
-/* FOOTER */
 
 footer{
 background:black;
-color:white;
+padding:30px;
 text-align:center;
-padding:35px;
-font-size:18px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-header{
-flex-direction:column;
-gap:15px;
-}
-
-nav{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.logo{
-font-size:28px;
-}
-
-.hero{
-height:500px;
-padding:25px;
-}
-
-.content h1{
-font-size:40px;
-}
-
-.content p{
-font-size:18px;
-}
-
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="topbar">
-<span>
-🔥 TOP11 MAURITIUS • ⚽ JERSEYS • 👟 BOOTS • 🎒 ACCESSORIES • 📱 PHONE COVERS • 🚚 FAST DELIVERY ACROSS MAURITIUS
-</span>
+<!-- RED MOVING BAR -->
+
+<div class="shipping-bar">
+<div class="shipping-text">
+🔥 40% - 50% OFF STOREWIDE • ⚽ WORLD CUP JERSEYS • 👟 ADIDAS F50 BOOTS • 🎒 FOOTBALL ACCESSORIES • ⚽ MATCH BALLS • 📱 PHONE COVERS • 🚚 FAST DELIVERY ACROSS MAURITIUS • 🔥 40% - 50% OFF STOREWIDE • ⚽ WORLD CUP JERSEYS • 👟 ADIDAS F50 BOOTS • 🎒 FOOTBALL ACCESSORIES • ⚽ MATCH BALLS • 📱 PHONE COVERS • 🚚 FAST DELIVERY ACROSS MAURITIUS
 </div>
+</div>
+
+<!-- HEADER -->
 
 <header>
 
@@ -215,6 +183,7 @@ TOP11 MAURITIUS
 <nav>
 <a href="#jerseys">Jerseys</a>
 <a href="#boots">Football Boots</a>
+<a href="#elite">Elite F50</a>
 <a href="#accessories">Accessories</a>
 <a href="#balls">Balls</a>
 <a href="#covers">Phone Covers</a>
@@ -222,23 +191,83 @@ TOP11 MAURITIUS
 
 </header>
 
-<!-- WORLD CUP -->
+<!-- WORLD CUP BANNER -->
 
-<section class="hero" style="background-image:url('worldcup.jpg');">
-
-<div class="overlay"></div>
+<section class="banner"
+style="background-image:url('worldcup-banner.jpg');">
 
 <div class="content">
-
-<h1>World Cup Collection</h1>
+<h1>WORLD CUP COLLECTION</h1>
 
 <p>
-Discover the latest national team jerseys from around the world.
+Portugal • Germany • Argentina • Brazil • France
 </p>
 
 <a href="#jerseys" class="btn">
-Shop Your Jersey
+SHOP YOUR JERSEY
 </a>
+
+</div>
+
+</section>
+
+<!-- BOOTS BANNER -->
+
+<section class="banner"
+style="background-image:url('boots-banner.jpg');">
+
+<div class="content">
+
+<h1>FOOTBALL BOOTS</h1>
+
+<p>
+Discover the latest Adidas F50 football boots.
+</p>
+
+<a href="#boots" class="btn">
+SHOP YOUR BOOTS
+</a>
+
+</div>
+
+</section>
+
+<!-- ELITE F50 BANNER -->
+
+<section class="banner"
+style="background-image:url('elite-banner.jpg');">
+
+<div class="content">
+
+<h1>ELITE F50</h1>
+
+<p>
+For the fastest. For the fearless.
+For the elite.
+</p>
+
+<a href="#elite" class="btn">
+SHOP OUR ELITES
+</a>
+
+</div>
+
+</section>
+
+<!-- JERSEYS -->
+
+<section class="collection" id="jerseys">
+
+<h2>WORLD CUP JERSEYS</h2>
+
+<div class="products">
+
+<div class="card">🇵🇹 Portugal</div>
+<div class="card">🇩🇪 Germany</div>
+<div class="card">🇦🇷 Argentina</div>
+<div class="card">🇧🇷 Brazil</div>
+<div class="card">🏴 England</div>
+<div class="card">🇫🇷 France</div>
 
 </div>
 
@@ -246,75 +275,83 @@ Shop Your Jersey
 
 <!-- BOOTS -->
 
-<section class="hero" style="background-image:url('boots.jpg');">
+<section class="collection" id="boots">
 
-<div class="overlay"></div>
+<h2>FOOTBALL BOOTS</h2>
 
-<div class="content">
+<div class="products">
 
-<h1>Football Boots Collection</h1>
-
-<p>
-Explore our latest football boots for every type of player.
-</p>
-
-<a href="#boots" class="btn">
-Shop Your Boots
-</a>
+<div class="card">👟 Adidas F50 Elite</div>
+<div class="card">👟 Adidas F50 League</div>
+<div class="card">👟 Adidas F50 Messi</div>
 
 </div>
 
 </section>
 
-<!-- ELITE F50 -->
+<!-- ELITE -->
 
-<section class="hero" style="background-image:url('elite.jpg');">
+<section class="collection" id="elite">
 
-<div class="overlay"></div>
+<h2>ELITE F50 COLLECTION</h2>
 
-<div class="content">
+<div class="products">
 
-<h1>Elite F50 Collection</h1>
-
-<p>
-Our highest level football boots for serious players.
-</p>
-
-<a href="#boots" class="btn">
-Shop Our Elites
-</a>
+<div class="card">🔥 F50 Elite White/Blue</div>
+<div class="card">🔥 F50 Elite Red</div>
+<div class="card">🔥 F50 Elite Black</div>
 
 </div>
 
 </section>
 
-<h2 class="section-title">
-Browse Our Collections
-</h2>
+<!-- ACCESSORIES -->
 
-<div class="collections">
+<section class="collection" id="accessories">
 
-<div class="card" id="jerseys">
-⚽ Jerseys
-</div>
+<h2>FOOTBALL ACCESSORIES</h2>
 
-<div class="card" id="boots">
-👟 Football Boots
-</div>
+<div class="products">
 
-<div class="card" id="accessories">
-🎒 Football Accessories
-</div>
-
-<div class="card" id="balls">
-⚽ Footballs
-</div>
-
-<div class="card" id="covers">
-📱 Phone Covers
-</div>
+<div class="card">🧦 Football Socks</div>
+<div class="card">🥤 Water Bottles</div>
+<div class="card">🎒 Sports Bags</div>
 
 </div>
+
+</section>
+
+<!-- BALLS -->
+
+<section class="collection" id="balls">
+
+<h2>FOOTBALLS</h2>
+
+<div class="products">
+
+<div class="card">⚽ Adidas Match Ball</div>
+<div class="card">⚽ Training Ball</div>
+<div class="card">⚽ Mini Ball</div>
+
+</div>
+
+</section>
+
+<!-- PHONE COVERS -->
+
+<section class="collection" id="covers">
+
+<h2>PHONE COVERS</h2>
+
+<div class="products">
+
+<div class="card">📱 Ronaldo Cover</div>
+<div class="card">📱 Messi Cover</div>
+<div class="card">📱 Neymar Cover</div>
+
+</div>
+
+</section>
 
 <footer>
 © 2025 TOP11 MAURITIUS
