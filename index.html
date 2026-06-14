@@ -1,9 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Top11 Mauritius</title>
 
 <style>
@@ -13,52 +13,56 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
-background:#111;
-color:white;
+background:#fff;
 }
+
+/* TOP BAR */
 
 .topbar{
-background:#00c853;
-overflow:hidden;
-white-space:nowrap;
+background:#16a34a;
+color:white;
 padding:12px 0;
+overflow:hidden;
+font-weight:bold;
+white-space:nowrap;
 }
 
-.marquee{
+.topbar span{
 display:inline-block;
-font-weight:bold;
+padding-left:100%;
 animation:scroll 18s linear infinite;
 }
 
 @keyframes scroll{
-from{transform:translateX(100%);}
-to{transform:translateX(-100%);}
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
 }
+
+/* HEADER */
 
 header{
 background:black;
+color:white;
 padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 position:sticky;
 top:0;
 z-index:1000;
 }
 
 .logo{
-text-align:center;
-font-size:36px;
-font-weight:bold;
-margin-bottom:15px;
+font-size:34px;
+font-weight:900;
 }
 
 .menu{
 display:flex;
-justify-content:center;
 gap:25px;
-flex-wrap:wrap;
 }
 
 .menu a{
@@ -67,106 +71,108 @@ text-decoration:none;
 font-weight:bold;
 }
 
-.banner{
-height:600px;
+/* HERO BANNERS */
+
+.hero{
+height:700px;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
-text-align:center;
-padding:20px;
+padding-left:8%;
+background-size:cover;
+background-position:center;
+position:relative;
 }
 
-.banner h1{
-font-size:60px;
-margin-bottom:15px;
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.35);
 }
 
-.banner p{
-font-size:22px;
+.content{
+position:relative;
+z-index:2;
+color:white;
+max-width:600px;
+}
+
+.content h1{
+font-size:65px;
 margin-bottom:20px;
 }
 
+.content p{
+font-size:22px;
+margin-bottom:30px;
+}
+
 .btn{
+display:inline-block;
+padding:15px 35px;
 background:white;
 color:black;
-padding:15px 35px;
-border-radius:30px;
 text-decoration:none;
 font-weight:bold;
+border-radius:40px;
 }
 
-.jersey-banner{
-background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=1600');
-background-size:cover;
-background-position:center;
-}
-
-.boots-banner{
-background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1600');
-background-size:cover;
-background-position:center;
-}
-
-.elite-banner{
-background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url('https://images.unsplash.com/photo-1511886929837-354d827aae26?w=1600');
-background-size:cover;
-background-position:center;
-}
+/* COLLECTIONS */
 
 .section-title{
 text-align:center;
-font-size:42px;
-padding:60px 20px 30px;
+font-size:40px;
+margin:60px 0 40px;
 }
 
-.products{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-padding:20px;
+.collections{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:0 5% 80px;
 }
 
 .card{
-background:#222;
-width:260px;
-border-radius:15px;
-overflow:hidden;
-}
-
-.card img{
-width:100%;
-height:250px;
-object-fit:cover;
-}
-
-.card-content{
-padding:15px;
-}
-
-.old-price{
-text-decoration:line-through;
-color:#999;
-}
-
-.sale-price{
+background:#f3f4f6;
+padding:50px 20px;
+text-align:center;
 font-size:24px;
-color:#00ff66;
 font-weight:bold;
+border-radius:15px;
+transition:.3s;
 }
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* FOOTER */
 
 footer{
 background:black;
+color:white;
 text-align:center;
-padding:40px;
-margin-top:50px;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero{
+height:500px;
+padding:20px;
+}
+
+.content h1{
+font-size:40px;
+}
+
+.content p{
+font-size:18px;
+}
+
+.menu{
+display:none;
+}
+
 }
 
 </style>
@@ -175,157 +181,124 @@ margin-top:50px;
 <body>
 
 <div class="topbar">
-<div class="marquee">
-🔥 TOP11 MAURITIUS • ⚽ JERSEYS • 👟 BOOTS • 🎒 ACCESSORIES • ⚽ BALLS • 📱 PHONE COVERS • 🚚 FAST DELIVERY ACROSS MAURITIUS •
-</div>
+<span>
+🔥 TOP11 MAURITIUS • ⚽ JERSEYS • 👟 BOOTS • 🎒 ACCESSORIES • 📱 PHONE COVERS • 🚚 FAST DELIVERY ACROSS MAURITIUS
+</span>
 </div>
 
 <header>
 
-<div class="logo">
-TOP11 MAURITIUS
-</div>
+<div class="logo">TOP11 MAURITIUS</div>
 
 <div class="menu">
 <a href="#jerseys">Jerseys</a>
 <a href="#boots">Football Boots</a>
-<a href="#accessories">Football Accessories</a>
+<a href="#accessories">Accessories</a>
 <a href="#balls">Balls</a>
 <a href="#covers">Phone Covers</a>
 </div>
 
 </header>
 
-<section class="banner jersey-banner">
+<!-- WORLD CUP -->
 
-<h1>WORLD CUP COLLECTION</h1>
+<section class="hero" style="background-image:url('worldcup.jpg');">
 
-<p>Discover National Team Jerseys</p>
+<div class="overlay"></div>
+
+<div class="content">
+
+<h1>World Cup Collection</h1>
+
+<p>
+Discover the latest national team jerseys from around the world.
+</p>
 
 <a href="#jerseys" class="btn">
-SHOP YOUR JERSEY
+Shop Your Jersey
 </a>
+
+</div>
 
 </section>
 
-<section class="banner boots-banner">
+<!-- BOOTS -->
 
-<h1>FOOTBALL BOOTS</h1>
+<section class="hero" style="background-image:url('boots.jpg');">
 
-<p>Speed, Control & Performance</p>
+<div class="overlay"></div>
+
+<div class="content">
+
+<h1>Football Boots Collection</h1>
+
+<p>
+Explore our range of football boots for every player.
+</p>
 
 <a href="#boots" class="btn">
-SHOP YOUR BOOTS
+Shop Your Boots
 </a>
+
+</div>
 
 </section>
 
-<section class="banner elite-banner">
+<!-- ELITE F50 -->
 
-<h1>ELITE F50 COLLECTION</h1>
+<section class="hero" style="background-image:url('elite.jpg');">
 
-<p>Premium Elite Football Boots</p>
+<div class="overlay"></div>
 
-<a href="#elite" class="btn">
-SHOP OUR ELITES
+<div class="content">
+
+<h1>Elite F50 Collection</h1>
+
+<p>
+Only the best elite football boots available.
+</p>
+
+<a href="#boots" class="btn">
+Shop Our Elites
 </a>
 
-</section>
+</div>
 
-<section id="jerseys">
+</section>
 
 <h2 class="section-title">
-⚽ Jerseys Collection
+Browse Our Collections
 </h2>
 
-<div class="products">
+<div class="collections">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600">
-<div class="card-content">
-<h3>Argentina World Cup Jersey</h3>
-<p class="old-price">Rs 1800</p>
-<p class="sale-price">Rs 1400</p>
-</div>
+<div class="card" id="jerseys">
+⚽ Jerseys
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?w=600">
-<div class="card-content">
-<h3>Portugal Jersey</h3>
-<p class="old-price">Rs 1800</p>
-<p class="sale-price">Rs 1400</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section id="boots">
-
-<h2 class="section-title">
+<div class="card" id="boots">
 👟 Football Boots
-</h2>
-
-<div class="products">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600">
-<div class="card-content">
-<h3>Mercurial</h3>
-<p class="sale-price">Rs 3900</p>
-</div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600">
-<div class="card-content">
-<h3>Predator</h3>
-<p class="sale-price">Rs 4200</p>
+<div class="card" id="accessories">
+🎒 Accessories
 </div>
+
+<div class="card" id="balls">
+⚽ Balls
+</div>
+
+<div class="card" id="covers">
+📱 Phone Covers
 </div>
 
 </div>
-
-</section>
-
-<section id="elite">
-
-<h2 class="section-title">
-🔥 Elite F50 Collection
-</h2>
-
-<div class="products">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600">
-<div class="card-content">
-<h3>Adidas F50 Elite</h3>
-<p class="sale-price">Rs 6500</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section id="accessories">
-<h2 class="section-title">🎒 Football Accessories</h2>
-</section>
-
-<section id="balls">
-<h2 class="section-title">⚽ Balls</h2>
-</section>
-
-<section id="covers">
-<h2 class="section-title">📱 Phone Covers</h2>
-</section>
 
 <footer>
-© Top11 Mauritius
+
+© 2025 Top11 Mauritius
+
 </footer>
 
 </body>
 </html>
-```
