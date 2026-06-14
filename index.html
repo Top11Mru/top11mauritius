@@ -1,10 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Top11 Mauritius</title>
+<title>TOP11 MAURITIUS</title>
 
 <style>
 
@@ -13,30 +13,31 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#fff;
+background:white;
 }
 
-/* TOP BAR */
+/* MOVING BAR */
 
 .topbar{
 background:#16a34a;
 color:white;
-padding:12px 0;
-overflow:hidden;
 font-weight:bold;
+overflow:hidden;
 white-space:nowrap;
+padding:12px 0;
 }
 
 .topbar span{
 display:inline-block;
 padding-left:100%;
-animation:scroll 18s linear infinite;
+animation:move 20s linear infinite;
 }
 
-@keyframes scroll{
+@keyframes move{
 0%{transform:translateX(0);}
 100%{transform:translateX(-100%);}
 }
@@ -45,8 +46,7 @@ animation:scroll 18s linear infinite;
 
 header{
 background:black;
-color:white;
-padding:20px;
+padding:20px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -56,37 +56,42 @@ z-index:1000;
 }
 
 .logo{
-font-size:34px;
+color:white;
+font-size:40px;
 font-weight:900;
 }
 
-.menu{
+nav{
 display:flex;
-gap:25px;
+gap:30px;
 }
 
-.menu a{
+nav a{
 color:white;
 text-decoration:none;
 font-weight:bold;
+font-size:18px;
 }
 
 /* HERO BANNERS */
 
 .hero{
 height:700px;
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
 padding-left:8%;
-background-size:cover;
-background-position:center;
 position:relative;
 }
 
 .overlay{
 position:absolute;
-inset:0;
-background:rgba(0,0,0,.35);
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.35);
 }
 
 .content{
@@ -97,8 +102,9 @@ max-width:600px;
 }
 
 .content h1{
-font-size:65px;
+font-size:70px;
 margin-bottom:20px;
+font-weight:900;
 }
 
 .content p{
@@ -108,41 +114,41 @@ margin-bottom:30px;
 
 .btn{
 display:inline-block;
-padding:15px 35px;
+padding:18px 40px;
 background:white;
 color:black;
 text-decoration:none;
 font-weight:bold;
-border-radius:40px;
+border-radius:50px;
 }
 
 /* COLLECTIONS */
 
 .section-title{
 text-align:center;
-font-size:40px;
-margin:60px 0 40px;
+font-size:42px;
+margin:70px 0 40px;
 }
 
 .collections{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
 padding:0 5% 80px;
 }
 
 .card{
 background:#f3f4f6;
-padding:50px 20px;
-text-align:center;
+padding:60px 20px;
+border-radius:15px;
 font-size:24px;
 font-weight:bold;
-border-radius:15px;
-transition:.3s;
+text-align:center;
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 /* FOOTER */
@@ -151,14 +157,31 @@ footer{
 background:black;
 color:white;
 text-align:center;
-padding:30px;
+padding:35px;
+font-size:18px;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
+header{
+flex-direction:column;
+gap:15px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.logo{
+font-size:28px;
+}
+
 .hero{
 height:500px;
-padding:20px;
+padding:25px;
 }
 
 .content h1{
@@ -169,13 +192,10 @@ font-size:40px;
 font-size:18px;
 }
 
-.menu{
-display:none;
-}
-
 }
 
 </style>
+
 </head>
 
 <body>
@@ -188,15 +208,17 @@ display:none;
 
 <header>
 
-<div class="logo">TOP11 MAURITIUS</div>
+<div class="logo">
+TOP11 MAURITIUS
+</div>
 
-<div class="menu">
+<nav>
 <a href="#jerseys">Jerseys</a>
 <a href="#boots">Football Boots</a>
 <a href="#accessories">Accessories</a>
 <a href="#balls">Balls</a>
 <a href="#covers">Phone Covers</a>
-</div>
+</nav>
 
 </header>
 
@@ -233,7 +255,7 @@ Shop Your Jersey
 <h1>Football Boots Collection</h1>
 
 <p>
-Explore our range of football boots for every player.
+Explore our latest football boots for every type of player.
 </p>
 
 <a href="#boots" class="btn">
@@ -255,7 +277,7 @@ Shop Your Boots
 <h1>Elite F50 Collection</h1>
 
 <p>
-Only the best elite football boots available.
+Our highest level football boots for serious players.
 </p>
 
 <a href="#boots" class="btn">
@@ -281,11 +303,11 @@ Browse Our Collections
 </div>
 
 <div class="card" id="accessories">
-🎒 Accessories
+🎒 Football Accessories
 </div>
 
 <div class="card" id="balls">
-⚽ Balls
+⚽ Footballs
 </div>
 
 <div class="card" id="covers">
@@ -295,9 +317,7 @@ Browse Our Collections
 </div>
 
 <footer>
-
-© 2025 Top11 Mauritius
-
+© 2025 TOP11 MAURITIUS
 </footer>
 
 </body>
