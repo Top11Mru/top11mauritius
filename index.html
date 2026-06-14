@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -12,7 +13,6 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
@@ -34,7 +34,7 @@ font-size:18px;
 .shipping-text{
 display:inline-block;
 padding-left:100%;
-animation:scrollText 20s linear infinite;
+animation:scrollText 18s linear infinite;
 }
 
 @keyframes scrollText{
@@ -121,58 +121,58 @@ font-size:20px;
 font-weight:bold;
 }
 
-.btn:hover{
-transform:scale(1.05);
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
 }
 
-/* COLLECTIONS */
-
-.collection{
-padding:80px 30px;
-background:#111;
+.logo{
+font-size:28px;
 }
 
-.collection h2{
-font-size:45px;
-text-align:center;
-margin-bottom:40px;
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.banner{
+height:500px;
+padding:20px;
 }
 
-.card{
-background:#222;
-padding:25px;
-border-radius:15px;
-text-align:center;
-font-size:22px;
-font-weight:bold;
+.content h1{
+font-size:42px;
+}
+
+.content p{
+font-size:18px;
+}
+
 }
 
 footer{
-background:black;
+background:#000;
 padding:30px;
 text-align:center;
+font-size:16px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- RED MOVING BAR -->
-
 <div class="shipping-bar">
 <div class="shipping-text">
-🔥 40% - 50% OFF STOREWIDE • ⚽ WORLD CUP JERSEYS • 👟 ADIDAS F50 BOOTS • 🎒 FOOTBALL ACCESSORIES • ⚽ MATCH BALLS • 📱 PHONE COVERS • 🚚 FAST DELIVERY ACROSS MAURITIUS • 🔥 40% - 50% OFF STOREWIDE • ⚽ WORLD CUP JERSEYS • 👟 ADIDAS F50 BOOTS • 🎒 FOOTBALL ACCESSORIES • ⚽ MATCH BALLS • 📱 PHONE COVERS • 🚚 FAST DELIVERY ACROSS MAURITIUS
+🔥 40% - 50% OFF STOREWIDE • ⚽ WORLD CUP JERSEYS • 👟 ADIDAS F50 BOOTS • 🎒 FOOTBALL ACCESSORIES • ⚽ MATCH BALLS • 📱 PHONE COVERS • 🚚 FAST DELIVERY ACROSS MAURITIUS
 </div>
 </div>
-
-<!-- HEADER -->
 
 <header>
 
@@ -181,174 +181,51 @@ TOP11 MAURITIUS
 </div>
 
 <nav>
-<a href="#jerseys">Jerseys</a>
-<a href="#boots">Football Boots</a>
-<a href="#elite">Elite F50</a>
-<a href="#accessories">Accessories</a>
-<a href="#balls">Balls</a>
-<a href="#covers">Phone Covers</a>
+<a href="#">Jerseys</a>
+<a href="#">Football Boots</a>
+<a href="#">Elite F50</a>
+<a href="#">Accessories</a>
+<a href="#">Balls</a>
+<a href="#">Phone Covers</a>
 </nav>
 
 </header>
 
-<!-- WORLD CUP BANNER -->
+<!-- WORLD CUP -->
 
 <section class="banner"
-style="background-image:url('worldcup-banner.jpg');">
+style="background-image:url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1800&q=80');">
 
 <div class="content">
 <h1>WORLD CUP COLLECTION</h1>
-
-<p>
-Portugal • Germany • Argentina • Brazil • France
-</p>
-
-<a href="#jerseys" class="btn">
-SHOP YOUR JERSEY
-</a>
-
-</div>
-
-</section>
-
-<!-- BOOTS BANNER -->
-
-<section class="banner"
-style="background-image:url('boots-banner.jpg');">
-
-<div class="content">
-
-<h1>FOOTBALL BOOTS</h1>
-
-<p>
-Discover the latest Adidas F50 football boots.
-</p>
-
-<a href="#boots" class="btn">
-SHOP YOUR BOOTS
-</a>
-
-</div>
-
-</section>
-
-<!-- ELITE F50 BANNER -->
-
-<section class="banner"
-style="background-image:url('elite-banner.jpg');">
-
-<div class="content">
-
-<h1>ELITE F50</h1>
-
-<p>
-For the fastest. For the fearless.
-For the elite.
-</p>
-
-<a href="#elite" class="btn">
-SHOP OUR ELITES
-</a>
-
-</div>
-
-</section>
-
-<!-- JERSEYS -->
-
-<section class="collection" id="jerseys">
-
-<h2>WORLD CUP JERSEYS</h2>
-
-<div class="products">
-
-<div class="card">🇵🇹 Portugal</div>
-<div class="card">🇩🇪 Germany</div>
-<div class="card">🇦🇷 Argentina</div>
-<div class="card">🇧🇷 Brazil</div>
-<div class="card">🏴 England</div>
-<div class="card">🇫🇷 France</div>
-
+<p>Portugal • Germany • Argentina • Brazil • France</p>
+<a href="#" class="btn">SHOP YOUR JERSEY</a>
 </div>
 
 </section>
 
 <!-- BOOTS -->
 
-<section class="collection" id="boots">
+<section class="banner"
+style="background-image:url('https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=1800&q=80');">
 
-<h2>FOOTBALL BOOTS</h2>
-
-<div class="products">
-
-<div class="card">👟 Adidas F50 Elite</div>
-<div class="card">👟 Adidas F50 League</div>
-<div class="card">👟 Adidas F50 Messi</div>
-
+<div class="content">
+<h1>FOOTBALL BOOTS</h1>
+<p>Discover the latest Adidas F50 football boots.</p>
+<a href="#" class="btn">SHOP YOUR BOOTS</a>
 </div>
 
 </section>
 
 <!-- ELITE -->
 
-<section class="collection" id="elite">
+<section class="banner"
+style="background-image:url('https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=1800&q=80');">
 
-<h2>ELITE F50 COLLECTION</h2>
-
-<div class="products">
-
-<div class="card">🔥 F50 Elite White/Blue</div>
-<div class="card">🔥 F50 Elite Red</div>
-<div class="card">🔥 F50 Elite Black</div>
-
-</div>
-
-</section>
-
-<!-- ACCESSORIES -->
-
-<section class="collection" id="accessories">
-
-<h2>FOOTBALL ACCESSORIES</h2>
-
-<div class="products">
-
-<div class="card">🧦 Football Socks</div>
-<div class="card">🥤 Water Bottles</div>
-<div class="card">🎒 Sports Bags</div>
-
-</div>
-
-</section>
-
-<!-- BALLS -->
-
-<section class="collection" id="balls">
-
-<h2>FOOTBALLS</h2>
-
-<div class="products">
-
-<div class="card">⚽ Adidas Match Ball</div>
-<div class="card">⚽ Training Ball</div>
-<div class="card">⚽ Mini Ball</div>
-
-</div>
-
-</section>
-
-<!-- PHONE COVERS -->
-
-<section class="collection" id="covers">
-
-<h2>PHONE COVERS</h2>
-
-<div class="products">
-
-<div class="card">📱 Ronaldo Cover</div>
-<div class="card">📱 Messi Cover</div>
-<div class="card">📱 Neymar Cover</div>
-
+<div class="content">
+<h1>ELITE F50</h1>
+<p>Premium football boots for elite players.</p>
+<a href="#" class="btn">SHOP OUR ELITES</a>
 </div>
 
 </section>
